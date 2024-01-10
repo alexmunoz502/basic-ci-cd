@@ -11,4 +11,5 @@ async def greeting(name: str) -> str:
     return f"Hello, {name.title()}!"
 
 
+# test comment
 app = Litestar([index, greeting])
