@@ -1,1 +1,1 @@
-web: litestar --app src.app:app run
+web: gunicorn src.app:app
