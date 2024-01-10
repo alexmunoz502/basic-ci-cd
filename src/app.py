@@ -1,4 +1,5 @@
 import uvicorn
+import os
 from litestar import Litestar, get
 
 
@@ -13,3 +14,7 @@ async def greeting(name: str) -> str:
 
 
 app = Litestar([index, greeting])
+
+
+if __name__ == "__main__":
+    uvicorn.run(app, host="0.0.0.0", port=int(os.environ.get("PORT", 8000)))
