@@ -1,3 +1,4 @@
+import uvicorn
 from litestar import Litestar, get
 
 
@@ -11,5 +12,8 @@ async def greeting(name: str) -> str:
     return f"Hello, {name.title()}!"
 
 
-# test comment
 app = Litestar([index, greeting])
+
+
+if __name__ == "__main__":
+    uvicorn.run(app=app, host="0.0.0.0", port="80")
