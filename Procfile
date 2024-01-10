@@ -1,1 +1,1 @@
-web: uvicorn --host 0.0.0.0 --port 0 src.app:app
+web: python ./src/app.py
