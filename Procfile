@@ -1,1 +1,1 @@
-web: python ./src/main.py
+web: litestar --app-dir ./src run
