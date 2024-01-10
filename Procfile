@@ -1,1 +1,1 @@
-web: litestar --app-dir ./src run
+web: litestar --app src.app:app run

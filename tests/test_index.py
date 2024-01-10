@@ -1,7 +1,7 @@
 import pytest
 from litestar.testing import TestClient
 from litestar.status_codes import HTTP_200_OK
-from src.main import app
+from src.app import app
 
 
 @pytest.fixture(scope="function")
