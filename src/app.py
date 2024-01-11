@@ -9,7 +9,7 @@ async def index() -> str:
 
 
 @get("/greeting")
-async def greeting(name: str) -> str:
+async def greeting(name: str = "world") -> str:
     return f"Hello, {name.title()}!"
 
 
