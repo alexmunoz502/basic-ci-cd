@@ -28,3 +28,10 @@ def test_greeting_message(test_client: TestClient) -> None:
         response = client.get("/greeting?name=alex")
         assert response.status_code == HTTP_200_OK
         assert response.text == "Hello, Alex!"
+
+
+def test_farewell_message__with_default(test_client: TestClient) -> None:
+    with test_client as client:
+        response = client.get("/farewell")
+        assert response.status_code == HTTP_200_OK
+        assert response.text == "Goodbye, World!"
