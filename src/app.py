@@ -13,7 +13,12 @@ async def greeting(name: str = "world") -> str:
     return f"Hello, {name.title()}!"
 
 
-app = Litestar([index, greeting])
+@get("/farewell")
+async def farewell(name: str = "world") -> str:
+    return f"Goodbye, {name.title()}!"
+
+
+app = Litestar([index, greeting, farewell])
 
 
 if __name__ == "__main__":
